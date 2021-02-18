@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">eCommerce</string>
+    <string name="app_slogan">Find, Discover, Choose and Buy...</string>
+    <string name="login_btn_txt">Alread have an account? LogIn</string>
+    <string name="join_now">Join Now</string>
+</resources>

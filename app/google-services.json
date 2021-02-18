@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "99630902771",
+    "project_id": "ecommerce-73724",
+    "storage_bucket": "ecommerce-73724.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99630902771:android:7c4939caaa7b4c1dbbf686",
+        "android_client_info": {
+          "package_name": "com.impervious.ecommerce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99630902771-c66jjihpv5uhal5dlmeqf84mqjjlt5lt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvetBAWlNX2V6Nak0yWWKPaMdP6Fk6Kes"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "99630902771-c66jjihpv5uhal5dlmeqf84mqjjlt5lt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
