@@ -21,7 +21,8 @@ public class HomeActivity extends AppCompatActivity {
 
         Paper.book().delete(Constants.BOOK_USER_PHONE_KEY);
         Paper.book().delete(Constants.BOOK_USER_PASS_KEY);
-        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        startActivity(new Intent(getApplicationContext(), StartActivity.class));
+        finish();
 
     }
 }

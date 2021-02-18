@@ -85,6 +85,7 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+
     private void loginAccount() {
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference(Constants.PARENT_DB_NAME);
@@ -103,7 +104,10 @@ public class LoginActivity extends AppCompatActivity {
 
                                 progressDialog.dismiss();
                                 Toast.makeText(LoginActivity.this, "Logged in successfully...", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(intent);
+
 
                             }
                         }
@@ -126,7 +130,6 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
 
 
             }

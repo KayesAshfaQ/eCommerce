@@ -75,7 +75,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void createNewAccount() {
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users");
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference(Constants.PARENT_DB_NAME);
 
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -98,6 +98,7 @@ public class RegisterActivity extends AppCompatActivity {
                                             Toast.LENGTH_SHORT).show();
                                     progressDialog.dismiss();
                                     startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                                    RegisterActivity.this.finish();
                                 }
                             })
                             .addOnFailureListener(new OnFailureListener() {
@@ -105,7 +106,8 @@ public class RegisterActivity extends AppCompatActivity {
                                 public void onFailure(@NonNull Exception e) {
                                     progressDialog.dismiss();
                                     Toast.makeText(RegisterActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                    startActivity(new Intent(getApplicationContext(), StartActivity.class));
+                                    RegisterActivity.this.finish();
                                     Toast.makeText(RegisterActivity.this, "please try again...", Toast.LENGTH_SHORT).show();
                                 }
                             });
@@ -124,5 +126,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     public void goToLoginAction(View view) {
         startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+        RegisterActivity.this.finish();
     }
+
 }
